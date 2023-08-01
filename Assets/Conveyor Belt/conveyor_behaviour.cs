@@ -21,7 +21,7 @@ public class conveyor_behaviour : MonoBehaviour
 
     void FixedUpdate(){
         Vector3 pos = GetComponent<Rigidbody>().position;
-        GetComponent<Rigidbody>().position -= Vector3.back * speed * Time.fixedDeltaTime * 3;
+        GetComponent<Rigidbody>().position += transform.forward * speed * Time.fixedDeltaTime * 3;
         GetComponent<Rigidbody>().MovePosition(pos);
     }
 }

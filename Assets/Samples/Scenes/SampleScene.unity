@@ -5654,5 +5654,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: belt
       objectReference: {fileID: 0}
+    - target: {fileID: 4276412398546787280, guid: 2bc6f9d3acc5c9e41942bbf2d3956d1c, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f6fb633bc0d4a7b4690ee5413f80187a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2bc6f9d3acc5c9e41942bbf2d3956d1c, type: 3}
