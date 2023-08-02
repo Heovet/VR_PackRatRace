@@ -173,6 +173,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 3.6
       objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: c761f71e1be16da489de87bb0225463f, type: 3}
+      propertyPath: m_Name
+      value: Food1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c761f71e1be16da489de87bb0225463f, type: 3}
 --- !u!1 &821082667729833938 stripped
