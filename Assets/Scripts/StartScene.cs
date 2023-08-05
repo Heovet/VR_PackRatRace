@@ -5,31 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class StartScene : MonoBehaviour
 {
+    public Animator transition;
+    public float transitionTime = 1f;
 
     // make sure sprite is clickable / has collider 
-    [SerializeField] string sceneName = "Level1";
+    [SerializeField] string sceneName = "TextIntro";
 
-    private void OnTriggerEnter(Collider other) {
-        LoadScene();
-    }
-    // private void OnMouseDown() {
-    //     print("hi");
-    //     LoadScene();
-    // }
-
-    private void LoadScene() {
-        SceneManager.LoadScene(sceneName);
+    public void LoadNextScene() {
+        StartCoroutine(LoadScene(SceneManager.GetActiveScene().buildIndex + 1));
     }
 
-    // Start is called before the first frame update
-    void Start()
+    IEnumerator LoadScene(int levelIndex)
     {
-        print("start");
-    }
+        transition.SetTrigger("Start");
 
-    // // Update is called once per frame
-    // void Update()
-    // {
-        
-    // }
+        yield return new WaitForSeconds(transitionTime);
+
+        SceneManager.LoadScene(levelIndex);
+    }
 }
