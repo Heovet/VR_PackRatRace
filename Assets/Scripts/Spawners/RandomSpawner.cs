@@ -20,7 +20,6 @@ public class RandomSpawner : MonoBehaviour
         if (Time.time > lastSpawnedTime + frequency && spawnbool)
         {
             int num = GetRandomNumber(0, spawnItemList.Count);
-            Debug.Log(num);
             GameObject spawnItem = spawnItemList[num];
             Spawn(spawnItem);
             lastSpawnedTime = Time.time;
