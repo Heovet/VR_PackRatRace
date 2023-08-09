@@ -44,8 +44,15 @@ public class CatMovementLevelTwo : MonoBehaviour
     public void CreepyTime() {
 
         isMoving = false;
+        transform.position = hidingPoint;
+        StopCoroutine(Teleport());
 
     }
+    // void update() {
+    //     if (!isMoving) {
+    //         transform.position = hidingPoint;
+    //     }
+    // }
 }
 
 
