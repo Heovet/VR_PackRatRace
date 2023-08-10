@@ -15,6 +15,8 @@ public class lv2Controller : MonoBehaviour
     public ScreenController screenController;
     public StopTheConveyor stopConveyor;
     public RandomSpawner spawner;
+    
+    public Rat2 ratt;
 
     int completedBoxes = 0;
 
@@ -59,6 +61,7 @@ public class lv2Controller : MonoBehaviour
 
         stopConveyor.CreepyTime();
         spawner.CreepyTime();
+        ratt.D1();
         
         
         
@@ -70,14 +73,14 @@ public class lv2Controller : MonoBehaviour
 
 
 
-    // void Start()
-    // {
-    //     StartCoroutine(Testingg());
-    // }
+    void Start()
+    {
+        StartCoroutine(Testingg());
+    }
 
-    // IEnumerator Testingg() {
-    //     yield return new WaitForSeconds(5);
-    //     CreepyTime();
-    //     print("activating Creepy Time");
-    // }
+    IEnumerator Testingg() {
+        yield return new WaitForSeconds(5);
+        CreepyTime();
+        print("activating Creepy Time");
+    }
 }

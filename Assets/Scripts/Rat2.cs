@@ -80,7 +80,7 @@ public class Rat2 : MonoBehaviour
         
     }
     IEnumerator Wait() {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         isMoving = 2;
     }
 

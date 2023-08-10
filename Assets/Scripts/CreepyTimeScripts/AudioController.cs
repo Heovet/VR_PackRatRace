@@ -11,7 +11,8 @@ public class AudioController : MonoBehaviour
     // Update is called once per frame
     void Update() {
         if (fade) {
-            audioSource.volume -= 0.002f;
+            audioSource.volume -= 0.01f;
+            print(audioSource.volume);
             if (audioSource.volume <= 0) {
                 fade = false;
             }
@@ -26,6 +27,7 @@ public class AudioController : MonoBehaviour
         }
         else if (lvl == 2) {
             fade = true;
+            print(fade);
             StartCoroutine(Lv2NewMusic());
               
         }
@@ -35,9 +37,12 @@ public class AudioController : MonoBehaviour
     IEnumerator Lv2NewMusic() {
         yield return new WaitForSeconds(6);
 
+        print("CREEPY_AUDIO");
+
         audioSource.clip = creepyMusic;
         audioSource.volume = 1;
         audioSource.Play();
+        audioSource.loop = true;
     }
 
 
